@@ -8,10 +8,11 @@ require_once 'includes/config.php';
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>Khach Hang</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/khachhang.css">
     <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -25,31 +26,19 @@ require_once 'includes/config.php';
 
     <?php include 'includes/navbar.php'; ?>
 
+    <ul class="nav nav-tabs" style="margin-bottom: 5px;">
+      <li class="active"><a href="#navSearch">Search</a></li>
+      <li><a href="#navAdd">Thêm KH</a></li>
+    </ul>
 
-      <h3 style="color: red;">Khách hàng</h3>
-
-
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <div class="container-fluid nopadding">
-          <div class="row">
-            <div class="col-md-4">
-              <form class="form-inline">
-                <input id="SearchValue" class="form-control" type="text" value="" placeholder="CellPhone or Lastname" name="SearchValue">
-                <button id="btnCustomerSearch" class="btn btn-default inline" type="button"><span class="glyphicon glyphicon-search"></span> Search</button>
-              </form>
-            </div>
-            <div class="col-md-4">
-            
-            
-            </div>
-          </div>
-        </div>
+    <div class="tab-content">
+      <div id="navSearch" class="tab-pane fade in active">
+        <?php include 'khachhang_search.php'; ?>
+      </div>
+      <div id="navAdd" class="tab-pane fade">
+        <p><?php include 'khachhang_add.php'; ?></p>
+      </div>
     </div>
-
-
-
 
 
 
@@ -70,5 +59,18 @@ require_once 'includes/config.php';
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+    });
+});
+$(document).ready(function(){
+    $("#test").click(function(){
+        $(this).tab('show');
+    });
+});
+</script>    
   </body>
 </html>
