@@ -3,7 +3,10 @@
 		<div class="panel panel-default">
 		 	<div class="panel-heading" style="">
 		 		<div class="row">
-		 			<div class="col-xs-6 col-md-6"><h4>Thêm khách hàng mới</h4></div>
+		 			<div class="col-xs-6 col-md-6">
+		 				<h4 class="pull-left">Thêm khách hàng mới</h4>
+		 				<!--<a href="#navSearch" class="btn btn-default pull-right" role="button" aria-controls="navAdd" data-toggle="tab">Search</a> -->
+		 			</div>
 					<!-- <div class="col-xs-6 col-md-6"><button type="button" class="btn btn-default active" style="float: right;">Lưu</button></div> -->
 				</div>
 			</div>
