@@ -23,8 +23,11 @@
   <li><a href="#">Menu 1</a></li>
 </ul>
 
+<legend>Thong tin khach hang</legend>
 
-
+<fieldset>
+<legend>Thong tin khach hang</legend>
+</fieldset>
 
 
 

@@ -1,50 +1,92 @@
-<?php
-require_once 'includes/db.php';
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-$conn = new mysqli($dbhost, $dbuser, $dbpass, $db0);
-if ($conn->connect_error) die ("<b style='color:red'>Error when connect to DB : </b>".$conn->connect_error);
+    <title>Login</title>
 
-if(isset($_SERVER['PHP_AUTH_USER']) && 
-	isset($_SERVER['PHP_AUTH_PW']) )
-{
-	$tmp_un 	= mysql_entities_fix_string($conn, $_SERVER['PHP_AUTH_USER']);
-	$tmp_pw		= mysql_entities_fix_string($conn, $_SERVER['PHP_AUTH_PW']);
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <style type="text/css">
 
-	$query		= "SELECT * from users WHERE user_name='$tmp_un'";
-	$result		= $conn->query($query);
-	if(!$result) die ("<b style='color:red'>Error login : </b>".$conn->error);
-	elseif ($result->num_rows) {
-		$row 	= $result->fetch_array(MYSQLI_NUM);
-			$result->close();
-		$salt1	= "qm&h*";
-		$salt2	= "pg!@";
-		$token	= hash('ripemd128', "$salt1$tmp_pw$salt2");
+    </style>
 
-		if ($token == $row[2]) {
-			session_start();
-			$_SESSION['username']	= $tmp_un;
-			$_SESSION['password']	= $tmp_pw;
-			$_SESSION['id']			= $row[0];
-
-			header('Location: khachhang.php');
-			//echo "Hi, $tmp_un"; //Test
-		}
-		else { //die ("Invalid username / password combination. <a href='logout.php'>Logout</a>");
-			header('WWW-Authenticate: Basic realm="Retricted Secion"');
-			header('HTTP/1.0 401 Unauthorized');
-			die("Please enter your username and password to login. <a href='logout.php'>Logout</a>");
-		}
-	} else { //die ("User is not exist. <a href='logout.php'>Logout</a>");
-		header('WWW-Authenticate: Basic realm="Retricted Secion"');
-		header('HTTP/1.0 401 Unauthorized');
-		die("Please enter your username and password to login. <a href='logout.php'>Logout</a>");
-	}
-}
-else {
-	header('WWW-Authenticate: Basic realm="Retricted Secion"');
-	header('HTTP/1.0 401 Unauthorized');
-	die("Please enter your username and password to login. <a href='logout.php'>Logout</a>");
-}
+  </head>
 
 
-?>
+
+
+    <div class="container" style="margin-top:40px">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <strong> Sign in to continue</strong>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" action="#" method="POST">
+                            <fieldset>
+                                <div class="row">
+                                    <div class="center-block">
+                                        <img class="profile-img"
+                                            src="images/vietnam_airlines_logo.png?sz=120" alt="">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-10  col-md-offset-1 ">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-user"></i>
+                                                </span> 
+                                                <input class="form-control" placeholder="Username" name="loginname" type="text" autofocus>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="glyphicon glyphicon-lock"></i>
+                                                </span>
+                                                <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="submit" class="btn btn-lg btn-primary btn-block" value="Sign in">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <!--
+                    <div class="panel-footer ">
+                        Don't have an account! <a href="#" onClick=""> Sign Up Here </a>
+                    </div>
+                -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src=""></script>
+
+  </body>
+</html>
