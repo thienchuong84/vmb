@@ -25,7 +25,7 @@ require_once 'includes/config.php';
   <body class="container-fluid">
 
     <?php include 'includes/navbar.php'; ?>
-
+<?php /*
     <ul class="nav nav-tabs" style="margin-bottom: 5px;">
       <li class="active"><a href="#navSearch">Search</a></li>
       <li><a href="#navAdd">Thêm KH</a></li>
@@ -39,7 +39,17 @@ require_once 'includes/config.php';
         <p><?php include 'khachhang_add.php'; ?></p>
       </div>
     </div>
+*/ ?>
 
+    <ul class="nav nav-tabs" role="tablist" style="margin-bottom: 5px;">
+      <li role="presentation" class="active"><a href="#navSearch" aria-controls="navSearch" role="tab" data-toggle="tab">Search</a></li>
+      <li role="presentation"><a href="#navAdd" aria-controls="navAdd" role="tab" data-toggle="tab">Thêm KH</a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="navSearch"><?php include 'khachhang_search.php'; ?></div>
+      <div role="tabpanel" class="tab pane fade" id="navAdd"><?php include 'khachhang_add.php'; ?></div>
+    </div>
 
 
 

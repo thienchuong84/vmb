@@ -67,7 +67,7 @@
 					<div class="form-group">
 					  <label class="col-md-2 control-label" for="note">Ghi chú</label>
 					  <div class="col-md-6">                     
-					    <textarea class="form-control" id="note" name="note" style="height: 300px;"></textarea>
+					    <textarea class="form-control" id="note" name="note" style="height: 200px;"></textarea>
 					  </div>
 					</div>
 					</div>

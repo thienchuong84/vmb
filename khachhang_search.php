@@ -26,7 +26,7 @@
               </form>
             </div>
             <div class="col-xs-6 col-md-4 col-md-offset-4">
-              <a id="test" href="#navAdd" class="btn btn-default pull-right" role="button">Thêm</a>
+              <a id="test2" href="#navAdd" class="btn btn-default pull-right" role="button" aria-controls="navAdd" data-toggle="tab">Thêm</a>  <!-- aria-controls và data-toggle quá tuyệt vời, có thể áp dụng trong cả thẻ a button. tuy nhiên khác tab là nó ko qua tab -->
             </div>
           </div>
   </div>
