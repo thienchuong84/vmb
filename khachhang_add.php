@@ -13,7 +13,7 @@
 		  <div class="panel-body">
 		  	<div class="row">
 		  		<div class="col-xs-12 col-md-8">
-					<form class="form-horizontal">
+					<form class="form-horizontal" id="saveKH" method="post">
 					<!-- Text input-->
 					<div class="row">
 					<div class="form-group">

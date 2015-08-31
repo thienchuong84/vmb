@@ -69,6 +69,7 @@ require_once 'includes/config.php';
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/khachhang.js"></script>
 
 <script>
 $(document).ready(function(){
