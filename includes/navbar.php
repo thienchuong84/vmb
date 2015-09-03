@@ -1,4 +1,5 @@
-<nav class="navbar navbar-inverse" style="margin: 0">
+<div class="container">
+<nav class="navbar navbar-inverse" style="margin-bottom: 5px;">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="#">Ve May Bay</a>
@@ -22,3 +23,4 @@
 		</div>
 	</div>
 </nav>
+</div>
