@@ -39,14 +39,18 @@ require_once 'includes/config.php';
 
               <div class="panel-body">
                 <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <label class="control-label col-md-1" for="hoten"><b style="color: red;">* </b>Tên:</label>
+                      <div class="col-md-3"><input type="text" class="form-control" id="hoten" name="ten" placeholder=""></div>
+                      <label class="control-label col-md-1" for="hoten"><b style="color: red;">* </b>Số ĐT1:</label>
+                      <div class="col-md-3"><input type="text" class="form-control" id="sdt" name="sdt1" placeholder=""></div>
+                      <label class="control-label col-md-1" for="hoten">Số ĐT2:</label>
+                      <div class="col-md-3"><input type="text" class="form-control" id="sdt" name="sdt2" placeholder=""></div>
+                    </div>
 
-                  <div class="row">
-                    <div class="form-horizontal form-group">
-                    <label class="control-label col-md-1" for="hoten"  class="col-md-1 right">Tên:</label>
-                    <div class="col-md-5"><input type="text" class="form-control" id="hoten" placeholder=""></div>
-                    <label class="col-md-1" for="sdt">Số đt</label>
-                    <div class="col-md-5"><input type="text" class="form-control" id="sdt" name="sdt" placeholder=""></div>
-                  </div>
+
+
+
 
                 </form><!-- END form -->
 
