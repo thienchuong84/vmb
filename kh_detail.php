@@ -38,14 +38,14 @@ require_once 'includes/config.php';
               </div>
 
               <div class="panel-body">
-                <form class="form-horizontal" id="f_luu_kh" role="form" action="kh_detail.php" method="post">
+                <form class="form-horizontal" role="form">
                     <div class="form-group">
                       <label class="control-label col-md-1" for="hoten"><b style="color: red;">* </b>Tên:</label>
-                      <div class="col-md-3"><input type="text" class="form-control" id="hoten" name="hoten" placeholder="" required></div>
+                      <div class="col-md-3"><input type="text" class="form-control" id="hoten" name="ten" placeholder=""></div>
                       <label class="control-label col-md-1" for="hoten"><b style="color: red;">* </b>Số ĐT1:</label>
-                      <div class="col-md-3"><input type="text" class="form-control" id="sdt1" name="sdt1" placeholder="" required></div>
+                      <div class="col-md-3"><input type="text" class="form-control" id="sdt" name="sdt1" placeholder=""></div>
                       <label class="control-label col-md-1" for="hoten">Số ĐT2:</label>
-                      <div class="col-md-3"><input type="text" class="form-control" id="sdt2" name="sdt2" placeholder=""></div>
+                      <div class="col-md-3"><input type="text" class="form-control" id="sdt" name="sdt2" placeholder=""></div>
                     </div>
 
                     <div class="row">
@@ -73,35 +73,11 @@ require_once 'includes/config.php';
                       </div>
                     </div>
 
-                    <div class="row" style="margin-left: 10px;">
-                      <div class="col-xs-3 col-md-2">
-                        <div class="form-horizontal">
-                          <div class="form-group">
-                            <select class="form-control" style="margin-bottom: 7px;">
-                              <option>Tư vấn</option>
-                              <option>Đặt mua</option>
-                            </select>
-                            <select class="form-control">
-                              <option>Call in</option>
-                              <option>Call out</option>
-                            </select>                            
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-xs-15 col-md-10">
-                        <textarea class="form-control" style="height: 75px;"></textarea>
-                      </div>
-                    </div>
-
                 </form><!-- END form -->
 
               </div>
 
             </div><!-- END panel -->
-    </div>
-
-    <div class="container">
-      <div id="show_result"></div>
     </div>
 
 
@@ -117,7 +93,8 @@ require_once 'includes/config.php';
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/kh_them.js"></script>
+
+
     <script>
 
     </script>    

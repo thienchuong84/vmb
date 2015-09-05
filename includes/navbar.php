@@ -11,7 +11,7 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li><a><?php echo date("l").", ".date("F")." ".date("d"); ?></a></li>
 				<li class="dropdown">
-					<a href="<?php echo dfSETTINGS; ?>" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expand="false">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expand="false">
 						Hello , <?php echo $_SESSION['user']." "; ?><span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">

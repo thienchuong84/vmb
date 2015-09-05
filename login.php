@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['id'])) header('Location: khachhang.php');
+if(isset($_SESSION['id'])) header('Location: kh.php');
 
 require_once 'includes/db.php';
 $conn = new mysqli($dbhost, $dbuser, $dbpass, $db0);
@@ -32,7 +32,7 @@ if($fail == ""){
             $_SESSION['id']         = $row[0];
             $_SESSION['user']       = $tmp_user;
             $_SESSION['pass']       = $token;
-            header('Location: khachhang.php');
+            header('Location: kh.php');
         } else $fail = "<b style='color: red'>Bạn nhập sai password</b>";        //chú ý: trong đây nếu dùng hảm return $fail thì sẽ bị trắng trang, chỉ cần gán giá trị cho nó thôi
     }
     else $fail = "<b style='color: red'>Không tồn tại user này.</b>";              // khác với hàm validate_username, ta reuturn vì đã có biến $fail để nhận giá trị trả về rồi tiếp tục thực hiện code
