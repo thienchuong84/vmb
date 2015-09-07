@@ -30,6 +30,7 @@ $("#luu_kh").click(function(){
 		}).done(function(msg){
 			//khi chạy ajax , khi có lỗi năm trong trang nó sẽ ko show được, vì vậy ta phải dùng .html(msg) dưới đây để show nội dung bên kia ra
 			$("#show_result").html(msg);
+			//window.location='kh.php';
 		});
 	} else {
 		alert(fail);
@@ -38,6 +39,8 @@ $("#luu_kh").click(function(){
 })
 
 function validateFullname(field) {
+	//field = $.trim(field); 	// cú pháp bỏ khoảng trống 2 bên. nếu user đánh khoảng trống thì ko được cho lưu https://css-tricks.com/snippets/javascript/strip-whitespace-from-string/
+	field = field.trim();
 	if(field == "") return "Bạn chưa nhập họ tên.\n";
 	return "";
 }
