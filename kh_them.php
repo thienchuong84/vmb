@@ -39,59 +39,52 @@ require_once 'includes/config.php';
 
         <div class="panel-body">
           <form class="form-horizontal" id="f_luu_kh" role="form" action="kh_detail.php" method="post">
-              <div class="form-group">
-                <label class="control-label col-md-1" for="hoten"><b style="color: red;">* </b>Tên:</label>
-                <div class="col-md-3"><input type="text" class="form-control" id="hoten" name="hoten" placeholder="" required></div>
-                <label class="control-label col-md-1" for="hoten"><b style="color: red;">* </b>Số ĐT1:</label>
-                <div class="col-md-3"><input type="text" class="form-control" id="sdt1" name="sdt1" placeholder="" required></div>
-                <label class="control-label col-md-1" for="hoten">Số ĐT2:</label>
-                <div class="col-md-3"><input type="text" class="form-control" id="sdt2" name="sdt2" placeholder=""></div>
-              </div>
+              
 
-              <div class="row">
-                <div class="col-xs-9 col-md-6">
-                  <div class="form-horizontal">
-                    <div class="form-group">
-                      <label class="control-label col-xs-2" for"diachi">Địa chỉ:</label>
-                      <div class="col-xs-10"><input type="text" class="form-control" id="diachi" name="diachi" placeholder=""></div>
-                    </div>
-                    <div class="form-group">
-                      <label class="control-label col-xs-2" for="note_dc">Note Đ/c:</label>
-                      <div class="col-xs-10"><input type="text" class="form-control" id="note_dc" name="note_dc" placeholder=""></div>
-                    </div>
-                    <div class="form-group">
-                      <label class="control-label col-xs-2" for="email">Email:</label>
-                      <div class="col-xs-10"><input type="text" class="form-control" id="email" name="email" placeholder=""></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-9 col-md-6">
-                  <div class="form-horizontal form-group">
-                    <label class="control-label col-xs-2" for="mota_kh">Ghi chú:</label>
-                    <div class="col-xs-10"><textarea class="form-control" id="mota_kh" name="mota_kh" row="10" style="height: 112px;"></textarea></div>
-                  </div>
-                </div>
-              </div>
+            <div class="form-group">
+              <label class="control-label col-md-1" for="hoten"><b style="color: red;">* </b>Tên:</label>
+              <div class="col-md-3"><input type="text" class="form-control" id="hoten" name="hoten" placeholder="" required></div>
+              <label class="control-label col-md-1" for="hoten"><b style="color: red;">* </b>Số ĐT1:</label>
+              <div class="col-md-3"><input type="text" class="form-control" id="sdt1" name="sdt1" placeholder="" required></div>
+              <label class="control-label col-md-1" for="hoten">Số ĐT2:</label>
+              <div class="col-md-3"><input type="text" class="form-control" id="sdt2" name="sdt2" placeholder=""></div>
+            </div>
+            
+            <div class="form-group">
+              <label class="control-label col-md-1" for="diachi">Địa chỉ:</label>
+              <div class="col-md-5"><input type="text" class="form-control" id="diachi" name="diachi" placeholder=""></div>
+              <label class="control-label col-md-1" for="note_dc">Note Đ/c:</label>
+              <div class="col-md-5"><input type="text" class="form-control" id="note_dc" name="note_dc" placeholder=""></div>
+            </div>
 
-              <div class="row" style="margin-left: 10px;">
-                <div class="col-xs-3 col-md-2">
-                  <div class="form-horizontal">
-                    <div class="form-group">
-                      <select class="form-control" style="margin-bottom: 7px;">
-                        <option>Tư vấn</option>
-                        <option>Đặt mua</option>
-                      </select>
-                      <select class="form-control">
-                        <option>Call in</option>
-                        <option>Call out</option>
-                      </select>                            
-                    </div>
-                  </div>
-                </div>
-                <div class="col-xs-15 col-md-10">
-                  <textarea class="form-control" style="height: 75px;"></textarea>
-                </div>
+            <div class="form-group">
+              <label class="control-label col-md-1" for="mota_kh">Ghi chú:</label>
+              <div class="col-md-5"><input type="text" class="form-control" id="mota_kh" name="mota_kh" placeholder=""></div>
+              <label class="control-label col-md-1" for="email">Email:</label>
+              <div class="col-md-5"><input type="text" class="form-control" id="email" name="email" placeholder=""></div>
+            </div>               
+
+            <hr>
+
+            <div class="form-group">
+              <div class="col-md-2">
+                <select id="sel_trangthai" name="sel_trangthai" class="form-control" style="margin-bottom: 7px;">
+                  <option value="1">Tư vấn</option>
+                  <option value="2">Đặt mua</option>
+                  <option value="3">Đã mua</option>
+                  <option value="4">Hủy</option>
+                </select>
               </div>
+              <div class="col-md-2">
+                <select id="sel_calltype" name="sel_calltype" class="form-control">
+                  <option value="1">Call in</option>
+                  <option value="2">Call out</option>
+                </select>
+              </div>
+              <div class="col-md-8">
+                <input type="text" id="txt_call_detail" name="txt_call_detail" class="form-control">
+              </div>                
+            </div>
 
           </form><!-- END form -->
 
@@ -102,8 +95,6 @@ require_once 'includes/config.php';
 
     <div class="container">
       <div id="show_result"></div>
-
-
     </div>
 
 

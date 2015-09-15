@@ -8,18 +8,24 @@ $("#luu_kh").click(function(){
 		//document.getElementById("f_luu_kh").submit(); 
 		//$("#f_luu_kh").submit();
 		//return true;
-		var tmp_hoten		= $("#hoten").val();
-		var tmp_sdt1		= $("#sdt1").val();
-		var tmp_sdt2		= $("#sdt2").val();
-		var tmp_diachi		= $("#diachi").val();
-		var tmp_note_dc		= $("#note_dc").val();
-		var tmp_email		= $("#email").val();
-		var tmp_mota_kh		= $("#mota_kh").val();
+		var tmp_hoten			= $("#hoten").val();
+		var tmp_sdt1			= $("#sdt1").val();
+		var tmp_sdt2			= $("#sdt2").val();
+		var tmp_diachi			= $("#diachi").val();
+		var tmp_note_dc			= $("#note_dc").val();
+		var tmp_email			= $("#email").val();
+		var tmp_mota_kh			= $("#mota_kh").val();
+		var tmp_sel_trangthai	= $("#sel_trangthai").val();	// refer: https://learn.jquery.com/using-jquery-core/faq/how-do-i-get-the-text-value-of-a-selected-option/
+		var tmp_sel_calltype	= $("#sel_calltype").val();
+		var tmp_txt_call_detail	= $("#txt_call_detail").val();
+		var tmp_txt_call_detail	= tmp_txt_call_detail.trim();	// refer: http://www.w3schools.com/jsref/jsref_trim_string.asp
 
 		$.ajax({
 			method: "POST",
 			url: 	"ajax.php",
-			data: 	{ add_hoten: tmp_hoten, add_sdt1: tmp_sdt1, add_sdt2: tmp_sdt2, add_diachi: tmp_diachi, add_note_dc: tmp_note_dc, add_email: tmp_email, add_mota_kh: tmp_mota_kh },
+			data: 	{ add_hoten: tmp_hoten, add_sdt1: tmp_sdt1, add_sdt2: tmp_sdt2, add_diachi: tmp_diachi, 
+				add_note_dc: tmp_note_dc, add_email: tmp_email, add_mota_kh: tmp_mota_kh, 
+				add_sel_trangthai: tmp_sel_trangthai, add_sel_calltype: tmp_sel_calltype, add_txt_call_detail: tmp_txt_call_detail },
 			success: function(result){
 				//$("#f_luu_kh").submit();
 				alert('success'+tmp_hoten+tmp_sdt1);

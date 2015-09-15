@@ -23,11 +23,34 @@
 $a = "Nguyễn Thiên Chương";
 echo $a;
 $b = htmlentities($a);
-echo "<br>".$b;
+echo "<br>".$b."<br>";
 
+// check null , refer: http://php.net/manual/en/function.is-null.php
+$c = "  ";
+if(is_null($c)) echo "Null <br>";
+else echo "Not Null <br>";
 
+$d = "     a   ";
+//$d = trim($d, " \t\n");
+$d = strip_tags($d);
+$d = htmlspecialchars($d);
+$d = stripslashes($d);
+echo "d".$d."d<br>";
+if(is_null($d)) 
+	echo "Null <br>";
+else 
+	echo "Not Null <br>";
 ?>
 
+<script type="text/javascript">
+	var str = "  bb  ";
+	//alert("a"+str.trim()+"a");
+</script>
+
+<?php // php date , refer: http://php.net/manual/en/function.date.php
+// set php datetime zone  , refer: http://php.net/manual/en/timezones.asia.php
+echo "Date: ".date("d/m/Y H:i");
+?>
 
 
 
