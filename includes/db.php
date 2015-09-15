@@ -37,3 +37,19 @@ function sanitizeString2($var) {
 	$var = stripslashes($var);
 	return $connection->real_escape_string($var);
 }
+
+function kiemtra_sdt($sdt) {
+	global $connection;
+	$row = 0;
+	if($sdt == "") return "";
+	else {
+		$sql 	= "SELECT id FROM phones WHERE deleted='0' and phone='$sdt'";
+		$result = $connection->query($sql);
+		if(!$result) die("<b style='color: red'>Query error : </b>".$conn->error);
+		else if ($result->num_rows){
+			return "Đã tồn tại số điện thoại $sdt<br>";
+		}			
+		else
+			return "";
+	}
+}

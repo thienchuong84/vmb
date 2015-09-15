@@ -23,6 +23,7 @@ $("#luu_kh").click(function(){
 			success: function(result){
 				//$("#f_luu_kh").submit();
 				alert('success'+tmp_hoten+tmp_sdt1);
+
 			},
 			error: function(xhr){
 				alert("An error occured: " + xhr.status + " " + xhr.statusText);
@@ -32,6 +33,9 @@ $("#luu_kh").click(function(){
 			$("#show_result").html(msg);
 			//window.location='kh.php';
 		});
+
+		// reset form luu kh
+		$("#f_luu_kh").get(0).reset()	// or: $("#f_luu_kh")[0].reset()  , refer: http://forwebonly.com/how-to-reset-an-html-form-with-jquery/
 	} else {
 		alert(fail);
 		return false;
@@ -60,3 +64,4 @@ function validateMobile2(field) {
 	}
 	return "";
 }
+
